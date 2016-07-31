@@ -1,0 +1,25 @@
+1. cat 보다 less가 더 유용함
+
+2. cp option :
+   -a 소유자 및 권한 속성까지 복사
+   -i 기존 파일을 덮어쓰기전에 확인 메시지를 보여줌
+   -u update, 보사할때 없거나 최신 버전인 파일만을 복사
+   -v 복사가 완료되었다는 메시지를 보여줌
+
+3. 원치않는 출력 제거
+   ls -l /bin/usr 2> /dev/null
+
+4. 중복 제거 및 표시
+   ls /bin /usr/bin | uniq
+   uniq -d  :   중복 표시
+
+5. wc ls-output.txt
+   라인 수 , 단어 개수, 파일 크기
+   ls /bin /usr/bin | sort | uniq | wc -l
+
+6. head / tail
+   tail -f /va/log/messages
+   tail -f dmesg
+   -f : 지속적으로 로그 파일을 감시하고 새 내용이 추가될 때 곧바로 내용을 표시
+        ctrl+c 입력 전까지 계속 수행
+	
